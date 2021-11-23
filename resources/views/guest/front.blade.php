@@ -10,6 +10,11 @@
 <body>
 	<div id="app"></div>
 
+	<script>
+		window.AppSettings = {
+			csrfToken: "{{ csrf_token() }}"
+		}
+	</script>
 	<script src="{{asset("js/front.js")}}"></script>
 </body>
 </html>

@@ -1,5 +1,6 @@
 <?php
 
+use App\Category;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -21,6 +22,9 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 // http://localhost:8000/api/posts
 Route::namespace('Api')->name('api.')->group(function() {
 
-	Route::get('/posts', 'PostController@index')->name("index");
+	Route::get('/posts', 'PostController@index');
+	Route::get('/posts/{slug}', 'PostController@show');
+
+	Route::get('/categories/{slug}', 'CategoryController@show');
 
 });

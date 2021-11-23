@@ -17,4 +17,21 @@ class PostController extends Controller
             'data' => $posts
         ]);
     }
+
+    public function show($slug)
+    {
+        $post = Post::where('slug', $slug)->with('category')->first();
+
+        if( $post ) {
+            return response()->json([
+                'success' => true,
+                'data' => $post
+            ]);
+        }
+
+        return response()->json([
+            'success' => false,
+            'data' => 'Nessun post trovato'
+        ]);
+    }
 }

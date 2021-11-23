@@ -2,7 +2,9 @@
 	<div class="post">
 		<h3>{{data.title}}</h3>
 		<p class="post__content">{{data.content}}</p>
-		<p><a href="#">Scopri di più</a></p>
+		<p>
+			<router-link :to="{ name: 'single-post', params: { slug: data.slug } }">Scopri di più</router-link>
+		</p>
 	</div>
 </template>
 
@@ -20,6 +22,7 @@
 		background-color: #444;
 		border-radius: 10px;
 		padding: 10px;
+		// min-height: 100px;
 
 		&__content {
 			margin-bottom: .625rem;
