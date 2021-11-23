@@ -4621,6 +4621,16 @@ body {
   color: #fff;
 }
 
+body > div {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex-grow: 1;
+}
+
 h1 {
   color: #D26;
   font-size: 2.5rem;

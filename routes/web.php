@@ -13,11 +13,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', 'PageController@index');
-
 Auth::routes();
 
 // rotte backoffice
 Route::middleware('auth')->namespace('Admin')->name('admin.')->prefix('admin')->group(function() {
     Route::get('/', 'HomeController@index')->name('home');
 });
+
+Route::get('/{any}', 'PageController@index')->where('any', '.*');

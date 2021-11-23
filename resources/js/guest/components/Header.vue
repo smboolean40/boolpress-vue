@@ -4,13 +4,9 @@
 			<h1>Boolpress</h1>
 			<nav>
 				<ul>
-					<li><a href="#">Link</a></li>
-					<li><a href="#">Link</a></li>
-					<li><a href="#">Link</a></li>
-					<li><a href="#">Link</a></li>
-					<li><a href="#">Link</a></li>
-					<li><a href="#">Link</a></li>
-					<li><a href="#">Link</a></li>
+					<li><router-link :to="{ name: 'home' }">Home</router-link></li>
+					<li><router-link :to="{ name: 'about' }">Chi Samo</router-link></li>
+					<li><router-link :to="{ name: 'contact' }">Contatti</router-link></li>
 				</ul>
 			</nav>
 		</div>
