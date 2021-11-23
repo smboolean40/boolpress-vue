@@ -1,6 +1,19 @@
 <template>
 	<header>
-		Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam voluptas doloribus quis tenetur molestiae commodi recusandae error tempora quibusdam! Dolorum ea quas quos fugit cumque non, minima provident autem. Deleniti.
+		<div class="container">
+			<h1>Boolpress</h1>
+			<nav>
+				<ul>
+					<li><a href="#">Link</a></li>
+					<li><a href="#">Link</a></li>
+					<li><a href="#">Link</a></li>
+					<li><a href="#">Link</a></li>
+					<li><a href="#">Link</a></li>
+					<li><a href="#">Link</a></li>
+					<li><a href="#">Link</a></li>
+				</ul>
+			</nav>
+		</div>
 	</header>
 </template>
 
@@ -9,3 +22,32 @@ export default {
 	name: 'Header'
 }
 </script>
+
+<style lang="scss" scoped>
+	header {
+		background-color: #222;
+		padding: 1.875rem 0;
+
+		.container {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+
+			ul {
+				display: flex;
+
+				li {
+					list-style: none;
+					a {
+						color: #fff;
+						text-decoration: none;
+						text-transform: uppercase;
+					}
+					&:not(:last-child) {
+						margin-right: 20px;
+					}
+				}
+			}
+		}
+	}
+</style>
